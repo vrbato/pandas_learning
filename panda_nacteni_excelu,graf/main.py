@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 
-df_gold_prices = pd.read_csv("monthly_gold_prices.csv")
+df_gold_prices = pd.read_excel("annual_gold_prices.xlsx")
 
 #kouknutí se na data - posledních 20 proto tail
 print(df_gold_prices.tail(20))
@@ -14,7 +14,8 @@ df_gold_prices["buy_price"] = prices * .9 #vytvoří to nový sloupec "buy price
 print(df_gold_prices["Price"].max())
 
 #očištění dat
-df_gold_prices["Date"] = df_gold_prices ["Date"].str.replace("-", "")
+#df_gold_prices["Date"] = df_gold_prices ["Date"].str.replace("-", "")
+
 #zobrazení sešitu - proměnné
 print(df_gold_prices)
 
